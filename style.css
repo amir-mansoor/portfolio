@@ -1,0 +1,427 @@
+* {
+  padding:0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  color: black;
+  text-decoration: none;
+}
+
+.flex {
+  display: flex;
+}
+
+.text-type > .txt {
+  border-right: 0.2rem solid #fff;
+}
+
+.header-flex {
+  align-items: center;
+  justify-content: space-between;
+  padding:10px 5px 10px 5px;
+  transition: all 0.5s ease;
+}
+
+.header-flex.scroll {
+  background-color: #0779e4;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  padding:15px 5px 15px 5px;
+  z-index: 2;
+}
+
+nav ul {
+  display: flex;
+  align-items: center;
+}
+
+nav {
+  z-index: 1;
+}
+
+nav ul li {
+  margin:0px 15px 0 10px;
+}
+
+nav ul li a {
+  color: white;
+  font-weight: 600;
+}
+
+nav ul li a.active {
+  color: black;
+}
+
+nav ul li a:hover {
+  opacity: 0.7;
+}
+
+header {
+  position: relative;
+  color: white;
+  width: 100%;
+  height: 100vh;
+}
+
+.header-flex h1 {
+  font-size: 25px;
+  z-index: 1;
+  margin-left: 10px;
+}
+
+.container {
+  max-width: 90%;
+  margin: 0 auto;
+  overflow: hidden;
+}
+
+header::before {
+  content:'';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: #0d6efd;
+  opacity: 0.7;
+}
+
+.showcase-flex {
+  align-items: center;
+  margin-top: 25px;
+  justify-content: space-between;
+}
+
+.showcase-flex img {
+  width: 30vw;
+  height: auto;
+}
+
+.text-area .toast {
+  background: #fff;
+  width: fit-content;
+  padding:5px;
+  color: #0d6efd;
+  font-size: 14px;
+  position: relative;
+}
+
+.text-area {
+  z-index: 1;
+}
+
+.text-area .toast::before {
+  content:'';
+  position: absolute;
+  top: 20px;
+  width: 30%;
+  height: 30%;
+  left: 30%;
+  transform: rotate(50deg);
+  background: white;
+  z-index: -1;
+}
+
+.text-area h1 {
+  letter-spacing: 3px;
+}
+
+.text-lg {
+  font-size: 30px;
+  font-weight: 600;
+}
+
+.text-gray {
+  color: rgba(0, 0, 0, 0.5);
+}
+
+.upper {
+  text-transform: uppercase;
+}
+
+.showcase-btn {
+  padding:10px 15px 10px 15px;
+  margin-top: 10px;
+  cursor: pointer;
+  border:none;
+  font-weight: 600;
+  transition: box-shadow 0.3s ease;
+  background-color: transparent;
+  border:1px solid white;
+}
+
+.showcase-btn:hover {
+  box-shadow: 1px 3px 6px -1px rgba(0,0,0,0.61);
+  -webkit-box-shadow: 1px 3px 6px -1px rgba(0,0,0,0.61);
+  -moz-box-shadow: 1px 3px 6px -1px rgba(0,0,0,0.61);
+}
+
+.blue-btn {
+  background:#0779e4;
+  color: white;
+  border:none;
+}
+
+.follow-links a {
+  color: white;
+  margin:5px 10px 0px 10px;
+  font-weight: bold;
+}
+
+.about {
+  width: 100vw;
+  height: 60vw;
+  margin-top: 3rem;
+}
+
+.image-area img{
+  width: 40vw;
+  border-radius: 5px;
+}
+
+.about-flex {
+  justify-content: space-between;
+}
+
+.tab {
+  background-color: #eeeeeea8;
+  border:none;
+  cursor: pointer;
+  margin-right: 10px;
+  padding:10px 5px 10px 5px;
+  border-radius: 5px;
+  font-weight: bold;
+  color: gray;
+  font-size: 17px;
+}
+
+.tabs {
+  margin-right: 6rem;
+  margin-top: 5rem;
+}
+
+.tab.active-tab {
+  background-color: #0779e4;
+  color: white;
+  font-weight: bold;
+  position: relative;
+}
+
+.tab.active-tab::before {
+  content:'';
+  position: absolute;
+  top: 29px;
+  width: 30%;
+  height: 30%;
+  left: 30%;
+  transform: rotate(50deg);
+  background: #0779e4;
+  z-index: -1;
+}
+
+.tabs-area {
+  margin-left: 1.4rem;
+}
+
+.tab-content {
+  margin-top: 1rem;
+}
+
+.tab-content h1 {
+  font-size: 2.5rem;
+  color: rgba(0,0,0,0.6);
+}
+
+.tab-content h3 {
+  font-size: 2rem;
+  color: rgba(0,0,0,0.6);
+}
+
+.tab-content p {
+  color: rgba(0,0,0,0.6);
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+
+.tab-1-content,
+.tab-2-content,
+.tab-3-content {
+  display: none;
+}
+
+.progress {
+  display: grid;
+  grid-template-columns: repeat(2,1fr);
+  grid-gap: 20px;
+}
+
+.progress-bar-back-line {
+  width: 100%;
+  height: 10%;
+  background: #f0f0f0;
+  border-radius: 5px;
+}
+
+.progress-line-80 {
+  width: 80%;
+  background: #0779e4;
+  height: 100%;
+  border-radius: 3px;
+}
+
+.progress-line-93 {
+  width: 93%;
+  background: #0779e4;
+  height: 100%;
+  border-radius: 3px;
+}
+
+.progress-line-88 {
+  width: 88%;
+  background: #0779e4;
+  height: 100%;
+  border-radius: 3px;
+}
+
+.progress-line-89 {
+  width: 89%;
+  background: #0779e4;
+  height: 100%;
+  border-radius: 3px;
+}
+
+.progress h3 {
+  font-size: 13px;
+}
+
+.progress span {
+  color:#0779e4;
+}
+
+.justify-line {
+  align-items: center;
+  justify-content: space-between;
+}
+
+.content h1 {
+  color: rgba(0,0,0,0.6);
+  margin-top: 1.4rem;
+  font-size: 20px;
+}
+
+.content {
+  margin-top: 1.5rem;
+}
+
+.content p {
+  color:rgba(0,0,0,0.5);
+}
+
+.tab-content.show {
+  display: block;
+}
+
+.services {
+  width: 100vw;
+  height: 60vw;
+  margin-top: 10rem;
+  background: #9999990d;
+}
+
+.services .upper {
+  color: #0779e4;
+}
+
+.services h4,
+.services h2 {
+  text-align: center;
+}
+
+.services .header-txt {
+  font-size: 45px;
+  color: rgba(0,0,0,0.6);
+  margin-top: 2rem;
+}
+
+.cards-margin {
+  margin-top: 4rem;
+  gap:20px;
+}
+
+.card {
+  background: rgba(242, 242, 242, 0.97);
+  padding:39px 31px 60px 42px;
+  box-shadow: 1px 3px 5px 0px rgba(0,0,0,0.75);
+  -webkit-box-shadow: 1px 3px 5px 0px rgba(0,0,0,0.75);
+  -moz-box-shadow: 1px 3px 5px 0px rgba(0,0,0,0.75);
+}
+
+.card-header h2 {
+  color: #0779e4;
+  text-align: left;
+}
+
+.contact-reference {
+  margin-top: 2rem;
+  text-align: center;
+  color: rgba(0,0,0,0.6);
+}
+
+.contact-reference strong a{
+  color: #0779e4;
+  font-weight: 800;
+}
+
+.overlay {
+  position: relative;
+  margin-top: 7rem;
+  margin-bottom: 7rem;
+  width: 100vw;
+  height: 35vh;
+  background-image: url("imgs/overlay.jpg");
+  background-size: cover;
+  background-position: 100% 100%;
+  background-repeat: no-repeat;
+  display: grid;
+  grid-template-columns: repeat(3,1fr);
+  align-items: center;
+  grid-gap: 20px;
+}
+
+.overlay > div {
+  z-index: 1;
+  color: white;
+  text-align: center;
+}
+
+.overlay div h3 {
+  font-size: 35px;
+}
+
+.overlay div span {
+  font-size: 20px;
+  font-weight: 700;
+}
+
+.overlay::before {
+  content:'';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: #0779e4;
+  opacity: .8;
+}
