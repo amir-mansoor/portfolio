@@ -94,3 +94,37 @@ tabs.forEach((tab => tab.addEventListener('click', changeTab)))
 const numberWithCommas = n => {
 	return n.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ',');
 }
+
+const counterUpdateFunc = () => {
+	let windowPos = window.scrollY
+	let counterPos = document.querySelector('.section-counter').offsetTop
+	let scrollTrigger = counterPos - window.innerHeight + 200
+	const frameDuration = 1000 / 60
+	if(windowPos >= scrollTrigger) {
+		const counters = document.querySelectorAll('.countup')
+    const speed = 551
+		counters.forEach((counter) => {
+			const updateCount = () => {
+				const target = +counter.getAttribute('data-target')
+				const count = +counter.innerText
+				const inc = target / speed
+
+				if(count < target) {
+					counter.innerText = Math.ceil(count + inc)
+					setTimeout(100)
+				} else {
+					counter.innerText = numberWithCommas(target)
+				}
+			}
+
+			setInterval(() => {
+				updateCount()
+			},frameDuration)
+
+			updateCount()
+		})
+	}
+}
+
+window.addEventListener('scroll',counterUpdateFunc)
+counterUpdateFunc()
