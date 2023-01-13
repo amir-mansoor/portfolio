@@ -425,3 +425,71 @@ header::before {
   background-color: #0779e4;
   opacity: .8;
 }
+
+.my-work {
+  margin-top: 5rem;
+  margin-bottom: 5rem;
+}
+
+.my-work h4,
+.my-work h2 {
+  text-align: center;
+}
+
+.my-work h4 {
+  color: #0779e4;
+}
+
+.my-work .header-txt {
+  font-size: 45px;
+  color: rgba(0,0,0,0.6);
+  margin-top: 2rem;
+}
+
+.mywork-cards {
+  display: grid;
+  grid-template-columns: repeat(2,1fr);
+  gap:1rem;
+}
+
+.work-card {
+  position: relative;
+  width: 100%;
+}
+
+.work-card img {
+  display: block;
+  width: 100%;
+  height: 40vw;
+}
+
+.overlay-text {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  width: 100%;
+  opacity: 0;
+  text-align: center;
+  transition: .5s ease;
+  background-color: #008CBA;
+}
+
+.work-card:hover .overlay-text {
+  opacity: 1;
+  cursor: pointer;
+}
+
+.text {
+  position: absolute;
+  transform: translate(-50%,-50%);
+  color: white;
+  top:50%;
+  left: 50%;
+}
+
+.testimonial {
+  margin-top: 3rem;
+}
