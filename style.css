@@ -493,3 +493,14 @@ header::before {
 .testimonial {
   margin-top: 3rem;
 }
+
+.student-cards {
+  display: flex;
+  overflow-x: scroll;
+  width: 70%;
+}
+
+.student-card {
+  background:rgba(238, 238, 238, 0.99);
+  
+}
